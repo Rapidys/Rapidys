@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    /*font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;*/
+    /*font-family: "ALK Life", sans-serif;*/
+
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*.page {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr;*/
+/*    grid-template-rows: 100px minmax(712px,auto) 1fr 300px;*/
+/*    grid-template-areas:*/
+/*            "header"*/
+/*    "slider"*/
+/*    "main"*/
+/*    "footer";*/
+/*}*/
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+
+
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+
+}
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    font-family: "ALK Life", sans-serif;
+    /*background-color: #3c5d5d;*/
+    background-color: rgb(94, 179, 155);
+
+}
+
+.logo{
+    width:120px;
+    height: 90px;
+    margin:0 auto;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    /*position: relative;*/
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr minmax(50px, 150px) 1fr;
+    position: relative;
+    z-index: 3;
+
+
+}
+
+.nav_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.items {
+    color: white;
+}
+.items.Fixed{
+    color: black;
+    transition: 5s;
+
+}
+
+.items:hover{
+    opacity: 0.7;
+    transition:all 0.3s ease;
+}
+
+
+@media (max-width: 767px) {
+    .nav_items_two{
+        margin-top:180px
+    }
+    body.lock{
+        overflow: hidden;
+    }
+    .nav {
+        display: grid;
+        grid-template-columns: 11fr 1fr;}
+
+    .nav_items {
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        align-items: start;
+    }
+    .items{
+        padding-bottom: 40px;
+    }
+    .header:before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        background-color: rgba(94, 179, 155, 0.4);
+        height: 90px;
+        left: 0;
+
+
+    }
+    .header {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        transition: all 0.3s ease 0s;
+
+    }
+    .header.active {
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        background-color: cadetblue;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        overflow: auto;
+
+
+    }
+    .nav_items.active{
+        display:flex;
+
+    }
+    .nav_items{
+        display: none;
+    }
+
+    .header_burger {
+        display: block;
+    }
+
+    .header_burger span {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: black;
+        right: 0;
+        top: 50px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header_burger:before,
+    .header_burger:after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: black;
+        right: 0;
+        top: 60px;
+        transition: all 0.3s ease 0s;
+
+    }
+
+    .header_burger:before {
+        top: 40px;
+        right: 0;
+    }
+
+    .header_burger.active:before {
+        transform:rotate(45deg);
+        top:50px;
+    }
+
+    .header_burger.active:after {
+        transform:rotate(-45deg);
+        top:50px;
+    }
+    .header_burger.active span{
+        transform: scale(0);
+    }
+}
+
+.main{
+    width: 100%;
+
+}
+.video{
+    width: 100%;
+
+}
+video{
+    width: 100%;
+border: 2px solid black;
+    padding: 5px;
+     margin-top: 90px;
+    max-height: 800px;
+}
+.footer {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    background-color: rgb(94, 179, 155);
+    height: 100px;
+    margin-top: 200px;
+}

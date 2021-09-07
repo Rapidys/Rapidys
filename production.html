@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="production/style.css">
+    <link rel="stylesheet" href="production/production_module_PopUp.css">
+    <link rel="icon" href="small_logos/ebra_logo.jpg">
+    <title>Document</title>
+</head>
+<body>
+
+
+<header class="header without_inherit">
+    <div class="container">
+        <nav class="nav">
+
+
+            <ul class="nav_items">
+                <a href="index.html" class="items">
+                    <li>მთავარი</li>
+                </a>
+                <a href="MakingProcess.html" class="items">
+                    <li>შექმნის პროცესი</li>
+                </a>
+
+                <a href="../production/production.html" class="items">
+                    <li>პროდუქცია</li>
+                </a>
+            </ul>
+            <div class="logo">
+                <a href="index.html"><img src="imgs/ebra_logo_white-01%20(1).png"
+                                          class="logo_pos" alt="index_Page"></a>
+            </div>
+            <ul class="nav_items nav_items_two">
+
+                <a href="contact.html" class="items">
+                    <li>კონტაქტი</li>
+                </a>
+                <a href="about_index.html" class="items">
+                    <li>ჩვენს შესახებ</li>
+                </a>
+
+            </ul>
+            <div class="header_burger">
+                <span></span>
+            </div>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+    <div class="container">
+
+
+        <div class="content_wraper">
+            <nav class="categories_bar">
+
+
+                <form action="" class="form">
+                    <select name="categories" id="product_categories">
+                        <option value="yvela" selected>ყველა</option>
+                        <option value="kedlis_tepshebi_sanatebi">კედლის თეფშები და საათები</option>
+                        <option value="larnakebi">ლარნაკები</option>
+                        <option value="nizharebi">ნიჟარები</option>
+                        <option value="samzareulo">სამზარეულო</option>
+                        <option value="sanati">სანათი</option>
+                        <option value="saxlis_dekori">სახლის დეკორი</option>
+
+                    </select>
+                    <input type="text" class="search_input" id="input">
+                </form>
+
+
+            </nav>
+            <ul class="pagination_section">
+                <li class="pagination_pages1 paginationActive">1</li>
+                <li class="pagination_pages2">2</li>
+                <li class="pagination_pages3">3</li>
+            </ul>
+            <!--            <div class="loading">-->
+            <!--                <img src="../imgs/preloader.gif " alt="loading...">-->
+
+            <!--            </div>-->
+
+            <div class="content" >
+                <div class="content_img">
+                    <div class="imgSection">
+                        <img src="" class="product_imgs" alt="Snow">
+                        <div class="overlay">
+                            <div class="text"></div>
+                        </div>
+                        <div class="infoSec">
+                            <h3 class="product_title"></h3>
+                            <span></span>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="lmodal">
+        <div class="lmodalPos">
+            <div class="lmodal_close"></div>
+            <div class="lmodalWindow">
+                <div class="modalWindow_imgSection">
+                    <img src="" alt="img" class="modal_img">
+                </div>
+                <div class="modalWindow_content">
+                    <div class="content_header">
+                        <h2 class="modalWindow_Title"></h2>
+                        <span class="close">&times</span>
+                    </div>
+                    <div class="content_info_about_product">
+                        <span class="product_Describe"></span>
+
+                    </div>
+                    <div class="content_Footer_buttons">
+                        <button type="button" class="btn-add">შეკვეთა</button>
+                        <button type="button" class="btn-massege">აქ მოგვწერეთ</button>
+                        <button type="button" class="btn-number">საკონტაქტო ნომ</button>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="lmodal_buy">
+        <div class="lmodalpos_buy">
+            <!--            <div class="lmodal_close"></div>-->
+
+            <div class="lmodal_window_buy">
+
+                <form action="" class="buy_Form">
+                    <input type="text" placeholder="ე-მაილი">
+                    <input type="text" placeholder="მობ">
+                    <input type="text" placeholder="სახელი">
+                    <input type="text" placeholder="გვარი">
+                    <textarea placeholder="დამატებითი მოთხოვნა" class="text_area_in_buy"></textarea>
+                    <button>შეკვეთა</button>
+                </form>
+                <span class="close_buy">&times</span>
+
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div></div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="slick-1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="production/style.css">
+<link rel="stylesheet" href="production/production_module_PopUp.css">
+
+<script src="app/Catalog.js"></script>
+<script src="app/Products/Products.js"></script>
+<script src="app/modal/modal.js"></script>
+
+<script src="app/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    /*background-color: rgba(92, 177, 154, 1);*/
+    /* background: var(--background); */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+
+
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+
+}
+
+.header {
+    background-color: rgba(92, 177, 154, 1);
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    font-family: "ALK Life", sans-serif;
+
+}
+
+
+.logo {
+    width: 120px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    /*position: relative;*/
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr minmax(50px, 150px) 1fr;
+    position: relative;
+    z-index: 3;
+
+
+}
+
+.nav_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.items {
+    color: white;
+}
+
+.items:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.items.Fixed {
+    color: black;
+    transition: 5s;
+
+}
+
+@media (max-width: 767px) {
+    .nav_items_two {
+        margin-top: 180px
+    }
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: 11fr 1fr;
+    }
+
+    .nav_items {
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        align-items: start;
+
+
+    }
+
+    .items {
+        padding-bottom: 40px;
+    }
+
+    .header:before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        background-color: rgba(94, 179, 155, 0.4);
+        height: 90px;
+        left: 0;
+
+
+    }
+
+    #header {
+        background-color: #5EB39B;
+    }
+
+    .header {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        transition: all 0.3s ease 0s;
+
+    }
+
+    .header.active {
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        background-color: cadetblue;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        overflow: auto;
+
+
+    }
+
+    .nav_items.active {
+        display: flex;
+
+    }
+
+    .nav_items {
+        display: none;
+    }
+
+    .header_burger {
+        display: block;
+    }
+
+    .header_burger span {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: black;
+        right: 0;
+        top: 50px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header_burger:before,
+    .header_burger:after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: black;
+        right: 0;
+        top: 60px;
+        transition: all 0.3s ease 0s;
+
+    }
+
+    .header_burger:before {
+        top: 40px;
+        right: 0;
+    }
+
+    .header_burger.active:before {
+        transform: rotate(45deg);
+        top: 50px;
+    }
+
+    .header_burger.active:after {
+        transform: rotate(-45deg);
+        top: 50px;
+    }
+
+    .header_burger.active span {
+        transform: scale(0);
+    }
+}
+
+
+.info {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    border-bottom: 3px solid #707070;
+    display: grid;
+    grid-template-columns:8fr 4fr;
+    font-family: "KA_LORTKIPANIDZE", sans-serif;
+align-items: center;
+
+}
+
+
+
+.info_side{
+    padding: 20px;
+    line-height: 2rem;
+}
+.info_side h1{
+    padding-bottom: 20px;
+}
+
+
+.info article {
+    max-width: 350px;
+   height: 350px;
+}
+.info article img {
+    width:100%;
+    height: 100%;
+}
+.team {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template: repeat(2, auto)/repeat(1, 1fr);
+}
+
+.team > h1 {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: initial;
+    font-family: "KA_LORTKIPANIDZE", sans-serif;
+
+}
+
+.team > section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.team > section > div {
+    max-width: 195px;
+    max-height: 180px;
+    border: 1px solid #707070;
+}
+
+.team > section > div > img {
+    width: 100%;
+    height: 180px;
+    padding: 1px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+footer {
+    width: 100%;
+    height: 175px;
+    background-color: #5EB39B;
+}
+
+
+@media (max-width: 992px ) {
+    .info {
+
+        display: grid;
+        grid-template-columns:1fr;
+
+    }
+    .info article{
+        margin:40px auto;
+    }
+    .team > section {
+
+        grid-gap: 10px;
+}
+
+@media (max-width: 767px) {
+
+    .team > section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+          margin:auto;
+        grid-gap: 80px;
+    }
+}}
+@media (max-width: 500px) {
+    .team > section {
+        display: grid;
+        grid-template-columns:1fr;
+        margin:auto;
+    }
+    .info_side p {
+        font-size: 10px;
+
+    }
+}
